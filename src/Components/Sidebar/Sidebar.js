@@ -1,23 +1,46 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
 function Sidebar() {
 	return (
 		<div id="nav-container">
-			<nav>
-				<ul className="list-group">
-					<li className="list-group-item list-group-item-action list-group-item-warning">
-						<Link to="/">Home</Link>
-					</li>
-					<li className="list-group-item list-group-item-action list-group-item-warning">
-						<Link to="/draw">Draws</Link>
-					</li>
-					<li className="list-group-item list-group-item-action list-group-item-warning">
-						<Link to="/contact">Contact</Link>
-					</li>
-				</ul>
-			</nav>
+			<div id="list">
+				<p className="list-item"></p>
+				<a href="home" className="pluslink">
+					Home
+				</a>
+				<p className="list-item">
+					<a href="draw" className="pluslink">
+						Draws
+					</a>
+				</p>
+				<p className="list-item">
+					<a href="contact" className="pluslink">
+						Contact
+					</a>
+				</p>
+			</div>
+
+			<div id="social">
+				<div className="logo">
+					<a href="https://www.instagram.com/alexp.art/">
+						<img
+							style={{ height: "100%" }}
+							src="https://logo-logos.com/wp-content/uploads/2016/10/Instagram_logo_icon.png"
+							alt="instagram"
+						/>
+					</a>
+				</div>
+				<div className="logo">
+					<a href="https://www.linkedin.com/in/alexandre-peter-73b625143/">
+						<img
+							style={{ height: "100%" }}
+							src="https://cdn.freebiesupply.com/logos/large/2x/linkedin-icon-logo-png-transparent.png"
+							alt="linkedin"
+						/>
+					</a>
+				</div>
+			</div>
 		</div>
 	);
 }

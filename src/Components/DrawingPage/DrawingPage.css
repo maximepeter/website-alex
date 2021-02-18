@@ -8,3 +8,8 @@
 #carousel {
 	width: 65%;
 }
+
+#description {
+	text-align: center;
+	padding: 5%;
+}

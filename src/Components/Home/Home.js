@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import img1 from "../../images/img1.jpeg";
+import img2 from "../../images/img2.jpeg";
+import img3 from "../../images/img3.jpeg";
+import img4 from "../../images/img4.jpeg";
+import img5 from "../../images/img5.jpeg";
+import img6 from "../../images/img6.jpeg";
 
 export const Home = () => (
 	<div className="home">
@@ -11,12 +17,14 @@ export const Home = () => (
 					<img
 						style={{ height: "200px" }}
 						className="card-img-top"
-						src="https://picsum.photos/200/900"
+						src={img1}
 						alt="item 11"
 					/>
 					<div className="card-body">
 						<h5 className="card-title">
-							<Link to="/draw">Dessin 1</Link>
+							<a href="draw" className="pluslink">
+								Dessin 1
+							</a>
 						</h5>
 					</div>
 				</div>
@@ -26,12 +34,14 @@ export const Home = () => (
 					<img
 						style={{ height: "200px" }}
 						className="card-img-top"
-						src="https://picsum.photos/200/800"
+						src={img2}
 						alt="item 12"
 					/>
 					<div className="card-body">
 						<h5 className="card-title">
-							<Link to="/draw">Dessin 2</Link>
+							<a href="draw" className="pluslink">
+								Dessin 2
+							</a>
 						</h5>
 					</div>
 				</div>
@@ -41,12 +51,14 @@ export const Home = () => (
 					<img
 						style={{ height: "200px" }}
 						className="card-img-top"
-						src="https://picsum.photos/200/700"
+						src={img3}
 						alt="item 13"
 					/>
 					<div className="card-body">
 						<h5 className="card-title">
-							<Link to="/draw">Dessin 3</Link>
+							<a href="draw" className="pluslink">
+								Dessin 3
+							</a>
 						</h5>
 					</div>
 				</div>
@@ -58,12 +70,14 @@ export const Home = () => (
 					<img
 						style={{ height: "200px" }}
 						className="card-img-top"
-						src="https://picsum.photos/200/100"
+						src={img4}
 						alt="item 21"
 					/>
 					<div className="card-body">
 						<h5 className="card-title">
-							<Link to="/draw">Dessin 4</Link>
+							<a href="draw" className="pluslink">
+								Dessin 3
+							</a>
 						</h5>
 					</div>
 				</div>
@@ -73,12 +87,14 @@ export const Home = () => (
 					<img
 						style={{ height: "200px" }}
 						className="card-img-top"
-						src="https://picsum.photos/200/200"
+						src={img5}
 						alt="item 22"
 					/>
 					<div className="card-body">
 						<h5 className="card-title">
-							<Link to="/draw">Dessin 5</Link>
+							<a href="draw" className="pluslink">
+								Dessin 4
+							</a>
 						</h5>
 					</div>
 				</div>
@@ -88,12 +104,14 @@ export const Home = () => (
 					<img
 						style={{ height: "200px" }}
 						className="card-img-top"
-						src="https://picsum.photos/200/300"
+						src={img6}
 						alt="item 23"
 					/>
 					<div className="card-body">
 						<h5 className="card-title">
-							<Link to="/draw">Dessin 6</Link>
+							<a href="draw" className="pluslink">
+								Dessin 5
+							</a>
 						</h5>
 					</div>
 				</div>

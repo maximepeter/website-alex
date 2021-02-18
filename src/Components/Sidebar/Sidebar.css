@@ -1,4 +1,41 @@
 #nav-container {
+	padding: 30%;
+	text-align: center;
 	height: 100%;
 	width: 100%;
+}
+
+#list {
+	height: fit-content;
+}
+
+a {
+	-webkit-transition: color 2s;
+	transition: color 0.5s;
+	text-decoration: none;
+	color: black;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 150%;
+}
+.pluslink,
+.pluslink:visited,
+.pluslink:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+.pluslink:hover {
+	text-decoration: none;
+	color: grey;
+}
+#social {
+	height: 15%;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.logo {
+	height: 100%;
+	padding: 20%;
 }
