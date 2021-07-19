@@ -1,9 +1,12 @@
 import "./Footer.css";
+import React, {Component} from "react";
 
-function Footer() {
-	return (
-		<div id="foot">
-			<p>Alexandre Macron</p>
+
+class Footer extends Component {
+	render() {
+	  	return (
+			<div id="foot">
+			<p>Alexandre Peter -  test	</p>
 			<p>Tel : +336 47 53 79 92</p>
 			<p>
 				Mail :
@@ -12,7 +15,8 @@ function Footer() {
 				</a>
 			</p>
 		</div>
-	);
+		);
+	}
 }
 
 export default Footer;

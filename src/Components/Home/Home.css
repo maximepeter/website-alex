@@ -3,11 +3,10 @@
 	text-align: center;
 	padding: 30px;
 }
-.tuile {
+.HomeCard {
 	width: 30%;
 	margin: 1.5%;
 }
-
 .flex-div {
 	display: flex;
 	padding: 50px;

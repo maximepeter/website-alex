@@ -1,8 +1,10 @@
 import "./Header.css";
+import React, {Component} from "react";
 
-function Header() {
-	return (
-		<div id="head">
+class Header extends Component {
+	render() {
+	  	return (
+			<div id="head">
 			<img
 				style={{
 					height: "85%",
@@ -14,7 +16,9 @@ function Header() {
 				alt="head"
 			/>
 		</div>
-	);
+		);
+	}
 }
+
 
 export default Header;
