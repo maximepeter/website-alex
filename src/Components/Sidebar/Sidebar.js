@@ -37,7 +37,7 @@ class Sidebar extends Component {
 						<a href="https://www.linkedin.com/in/alexandre-peter-73b625143/">
 							<img
 								style={{ height: "100%" }}
-								src="https://cdn.freebiesupply.com/logos/large/2x/linkedin-icon-logo-png-transparent.png"
+								src={require('../../images/linkedIn.png').default}
 								alt="linkedin"
 							/>
 						</a>

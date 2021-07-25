@@ -4,6 +4,7 @@ import "./HomeCard.css";
 class HomeCard extends Component {
 	render() {
 		var imgId = this.props.id
+		var drawName = require("../../images/"+ imgId +"/metaData" + imgId + ".json")["drawName"]
 	  	return (
 			<div className="flex-div">
 				<div className="tuile">
@@ -18,7 +19,7 @@ class HomeCard extends Component {
 						<div className="card-body">
 							<h5 className="card-title">
 								<a href={"draw?imgId="+imgId} className="pluslink">
-									Dessin {imgId}
+									{drawName}
 								</a>
 							</h5>
 						</div>
