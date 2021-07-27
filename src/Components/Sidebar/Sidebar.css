@@ -1,5 +1,7 @@
 #nav-container {
-	padding: 30%;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 20%;
 	text-align: center;
 	height: 100%;
 	width: 100%;
@@ -30,7 +32,6 @@ a {
 }
 #social {
 	height: 15%;
-	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
 }

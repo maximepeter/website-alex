@@ -5,9 +5,9 @@ import "./Home.css";
 class Home extends Component {
 	generateRandomImages() {
 		var imgList = []
-		var max = 8;
+		var max = 11;
 		var min = 1;
-		while (imgList.length < 5) {
+		while (imgList.length < 6) {
 			var randomIdx = Math.floor(Math.random() * (max - min) + min)
 			if (!imgList.includes(randomIdx)) {
 				imgList.push(randomIdx)
@@ -29,7 +29,7 @@ class Home extends Component {
 				<div className="flex-div">
 					<HomeCard id={imgList[3]} img={require("../../images/"+imgList[3]+"/img"+imgList[3]+".jpeg").default}/>
 					<HomeCard id={imgList[4]} img={require("../../images/"+imgList[4]+"/img"+imgList[4]+".jpeg").default}/>
-					<HomeCard id={10} img={require("../../images/10/img"+10+".jpeg").default}/>
+					<HomeCard id={imgList[5]} img={require("../../images/"+imgList[5]+"/img"+imgList[5]+".jpeg").default}/>
 				</div>
 				
 			</div>

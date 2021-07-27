@@ -7,21 +7,26 @@ class Contact extends Component {
 			<div id="container-contact">
 				<h4>A propos de moi :</h4>
 				<p>
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-					veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-					cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-					est laborum."
+					Pour faire court : Je suis un artiste digital ainsi que traditionnel (amoureux invétéré
+					de l’aquarelle), je dessine depuis toujours. Animateur de formation et
+					professionnellement, je passe la majorité de mon temps libre à créer de nouvelles
+					illustrations.
 				</p>
-				<h4>Expériences :</h4>
-				<ul>
-					<li>Expérience 1</li>
-					<li>Expérience 2</li>
-					<li>Expérience 3</li>
-					<li>...</li>
-				</ul>
+				<p>
+					Pour l’histoire longue, d’aussi loin que je me souvienne, j’ai toujours dessiné. Avec
+					plus ou moins d’intensité selon les périodes, mes amis ou professeurs m’ont toujours
+					dit que j’avais ce “talent” du dessin. A mon sens c’est surtout une facilité
+					d’observation. C’est donc naturellement que je me suis dirigé vers une formation
+					dans l'audiovisuel. Illustrateur et animateur français, je vis en tant qu’indépendant en
+					banlieue parisienne. Diplômé de <a href="https://www.lisaa.com/fr">LISAA</a> en 2017 d’un
+					bachelor en animation 3D.
+				</p>
+				<p>
+					En parallèle du professionnel, je travaille principalement sur mes projets perso et
+					illustrations sur mon temps libre.
+					Affamé de connaissances et toujours à la recherche du prochain défi à relever,
+					n'hésitez pas à me contacter.
+				</p>
 			</div>
 		);
 	}

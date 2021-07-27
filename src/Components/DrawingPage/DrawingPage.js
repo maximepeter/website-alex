@@ -48,7 +48,7 @@ class DrawingPage extends Component {
 						<Carousel.Item>
 							<img								
 								className="d-block w-100"
-								src={require('../../images/10/img10hand.jpeg').default}
+								src={require('../../images/'+imgId+'/img'+imgId+'hand.jpeg').default}
 								alt="2"
 							/>
 						</Carousel.Item>
