@@ -3,18 +3,20 @@
 	text-align: center;
 	padding: 30px;
 }
+.wrapper {
+	position: relative;
+}
 .HomeCard {
 	width: 30%;
 	margin: 1.5%;
 }
 .flex-div {
 	display: flex;
-	padding: 50px;
+	padding: 0.5%;
 	margin: 0 auto;
 	width: 100%;
-	text-align: center;
+	text-align: center;;
 }
-
 a {
 	-webkit-transition: color 2s;
 	transition: color 0.5s;
@@ -23,13 +25,10 @@ a {
 	font-family: "Trebuchet MS", sans-serif;
 	font-size: 100%;
 }
-.pluslink,
-.pluslink:visited,
-.pluslink:active {
+.pluslink, .pluslink:visited, .pluslink:active {
 	text-decoration: none;
 	color: inherit;
 }
-
 .pluslink:hover {
 	text-decoration: none;
 	color: grey;

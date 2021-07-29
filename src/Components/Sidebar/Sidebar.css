@@ -1,14 +1,10 @@
-#nav-container {
-	margin-left: 30%;
-	margin-right: 30%;
-	margin-top: 20%;
-	text-align: center;
+#nav-container {	
+	position: relative;
 	height: 100%;
 	width: 100%;
 }
-
-#list {
-	height: fit-content;
+#logo-alex{
+	height: 20%;
 }
 
 a {
@@ -30,13 +26,38 @@ a {
 	text-decoration: none;
 	color: grey;
 }
+#list {
+	margin-left: 10%;
+}
 #social {
-	height: 15%;
+	position: absolute;
+	height: 7%;
 	flex-wrap: wrap;
 	text-align: center;
+	bottom: 0%;
+	display: flex;
+	padding: 0.5%;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 
 .logo {
-	height: 100%;
-	padding: 20%;
+	height: 80%;
+	display: flex;
+	margin: auto;
+	width: auto;
+}
+.list-item {
+	position: relative;
+	margin-top: 1.5%;
+	margin-bottom: 1.5;
+	display: flex;
+}
+.arrow {
+	position: absolute;
+	left: 85%;
+	height: 30%;
+	display: flex;
+	margin-top: 7%;
 }

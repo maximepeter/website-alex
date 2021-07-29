@@ -34,9 +34,8 @@
 }
 
 #sidebar {
-	height: 100%;
-	width: 15%;
-	background-color: #fff7eb;
+	width: 13%;
+	background-color: #f1f1f1;
 }
 
 #router {
@@ -44,8 +43,8 @@
 }
 
 #main {
-	background-color: #fff7eb;
-	width: 85%;
+	background-color: #e6e6e6;
+	width: 87%;
 	position: relative;
 	flex-wrap: wrap;
 }

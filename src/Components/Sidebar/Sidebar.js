@@ -6,29 +6,51 @@ class Sidebar extends Component {
 	render() {
 	  	return (
 			<div id="nav-container">
-				<div id="list">
-					<p className="list-item"></p>
-					<a href="home" className="pluslink">
-						Home
-					</a>
-					<p className="list-item">
-						<a href="draw" className="pluslink">
-							Draws
-						</a>
-					</p>
-					<p className="list-item">
-						<a href="contact" className="pluslink">
-							Contact
-						</a>
-					</p>
+				<div id="logo-alex">
+					<img
+					src={require('../../images/logo.png').default}
+					style={{ height: "100%" }}
+					/>
 				</div>
-
+				<div id="list">
+					<a href="home" className="pluslink">
+						<div className="list-item">
+							<div classname="item-title">HOME</div>
+							<div className="arrow">
+								<img 
+								src={require('../../images/arrow.png').default}
+								/>
+							</div>
+						</div>
+					</a>
+					<a href="draw" className="pluslink">
+						<div className="list-item">
+							<div classname="item-title">DRAWS</div>
+							<div className="arrow">
+									<img 
+									src={require('../../images/arrow.png').default}
+									/>
+							</div>
+						</div>
+					</a>
+					<a href="contact" className="pluslink">
+						<div className="list-item">
+							<div classname="item-title">CONTACT</div>
+							<div className="arrow">
+									<img 
+									src={require('../../images/arrow.png').default}
+									/>
+							</div>
+						</div>
+					</a>
+				</div>
+				
 				<div id="social">
 					<div className="logo">
 						<a href="https://www.instagram.com/alexp.art/">
 							<img
-								style={{ height: "100%" }}
-								src="https://logo-logos.com/wp-content/uploads/2016/10/Instagram_logo_icon.png"
+								style={{ height: "50%" }}
+								src={require('../../images/instagramIcon.png').default}
 								alt="instagram"
 							/>
 						</a>
@@ -36,8 +58,8 @@ class Sidebar extends Component {
 					<div className="logo">
 						<a href="https://www.linkedin.com/in/alexandre-peter-73b625143/">
 							<img
-								style={{ height: "100%" }}
-								src={require('../../images/linkedIn.png').default}
+								style={{ height: "50%" }}
+								src={require('../../images/linkedInIcon.png').default}
 								alt="linkedin"
 							/>
 						</a>

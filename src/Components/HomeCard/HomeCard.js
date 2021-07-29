@@ -7,25 +7,24 @@ class HomeCard extends Component {
 		var drawName = require("../../images/"+ imgId +"/metaData" + imgId + ".json")["drawName"]
 	  	return (
 			<div className="flex-div">
-				<div className="tuile">
 					<div className="card">
-						
 						<img
-							style={{ height: "200px" }}
 							className="card-img-top"
 							src={this.props.img}
 							alt="item 11"
 						/>
-						<div className="card-body">
-							<h5 className="card-title">
-								<a href={"draw?imgId="+imgId} className="pluslink">
+						<a href={"draw?imgId="+imgId} className="pluslink">
+							<div class="image__overlay image__overlay--primary">
+        						<div class="image__title">
 									{drawName}
-								</a>
-							</h5>
-						</div>
+								</div>
+        						<p class="image__description">
+            						Here we have a brick wall.
+        						</p>
+    						</div>				
+						</a>
 					</div>
 				</div>
-			</div>
 		);
 	}
 }
