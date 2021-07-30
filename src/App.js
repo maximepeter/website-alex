@@ -8,14 +8,14 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 
-import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
 				<div id="router">
-					<Router>
+					<Router basename={process.env.PUBLIC_URL}>
 					
 						<div id="flex-container">
 							<div id="sidebar">
