@@ -13,7 +13,7 @@ class Sidebar extends Component {
 					/>
 				</div>
 				<div id="list">
-					<a href="home" className="pluslink">
+					<a href="/" className="pluslink">
 						<div className="list-item">
 							<div classname="item-title">HOME</div>
 							<div className="arrow">

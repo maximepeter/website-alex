@@ -16,7 +16,6 @@ class App extends Component {
 			<React.Fragment>
 				<div id="router">
 					<Router basename={process.env.PUBLIC_URL}>
-					
 						<div id="flex-container">
 							<div id="sidebar">
 								<Sidebar />
@@ -25,7 +24,7 @@ class App extends Component {
 								<div id="content">
 									<Header />
 									<Switch>
-										<Route exact path="/home" component={Home} />
+										<Route exact path="/" component={Home} />
 										<Route exact path="/draw" component={DrawingPage} />
 										<Route exact path="/contact" component={Contact} />
 										<Route component={NoMatch} />
