@@ -24,9 +24,9 @@ class App extends Component {
 								<div id="content">
 									<Header />
 									<Switch>
-										<Route exact path={"/"} component={Home} />
-										<Route exact path="/draw" component={DrawingPage} />
-										<Route exact path="/contact" component={Contact} />
+										<Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+										<Route exact path={process.env.PUBLIC_URL + "/draw"} component={DrawingPage} />
+										<Route exact path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
 										<Route component={NoMatch} />
 									</Switch>
 
