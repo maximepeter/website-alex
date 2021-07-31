@@ -6,6 +6,7 @@ class Sidebar extends Component {
 	render() {
 	  	return (
 			<div id="nav-container">
+				
 				<div id="logo-alex">
 					<img
 					src={require('../../images/logo.png').default}
