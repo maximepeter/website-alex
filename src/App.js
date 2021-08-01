@@ -8,14 +8,14 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 
-import { BrowserRouter, BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route} from "react-router-dom";
 
 class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
 				<div id="router">
-					<HashRouter basename={"/"}>
+					<BrowserRouter basename={"/"}>
 						<div id="flex-container">
 							<div id="sidebar">
 								<Sidebar />
@@ -32,7 +32,7 @@ class App extends Component {
 							</div>
 						</div>
 					
-					</HashRouter>
+					</BrowserRouter>
 				</div>
 			</React.Fragment>
 		);
