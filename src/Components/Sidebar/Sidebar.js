@@ -24,16 +24,6 @@ class Sidebar extends Component {
 							</div>
 						</div>
 					</a>
-					<a href="draw" className="pluslink">
-						<div className="list-item">
-							<div classname="item-title">DRAWS</div>
-							<div className="arrow">
-									<img 
-									src={require('../../images/arrow.png').default}
-									/>
-							</div>
-						</div>
-					</a>
 					<a href="contact" className="pluslink">
 						<div className="list-item">
 							<div classname="item-title">CONTACT</div>

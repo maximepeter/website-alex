@@ -26,7 +26,6 @@ class App extends Component {
 										<Route exact path={"/"} component={Home} />
 										<Route exact path={"/draw"} component={DrawingPage} />
 										<Route exact path="/contact" component={Contact} />
-										<Route component={NoMatch} />
 									<Footer />
 								</div>
 							</div>
