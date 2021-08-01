@@ -8,7 +8,7 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 
-import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {
 	render() {
@@ -23,13 +23,10 @@ class App extends Component {
 							<div id="main">
 								<div id="content">
 									<Header />
-									<Switch>
 										<Route exact path={"/"} component={Home} />
-										<Route exact path="/draw" component={DrawingPage} />
+										<Route exact path={"/draw"} component={DrawingPage} />
 										<Route exact path="/contact" component={Contact} />
 										<Route component={NoMatch} />
-									</Switch>
-
 									<Footer />
 								</div>
 							</div>
