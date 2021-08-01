@@ -15,7 +15,7 @@ class App extends Component {
 		return (
 			<React.Fragment>
 				<div id="router">
-					<HashRouter basename={process.env.PUBLIC_URL}>
+					<HashRouter basename={"/website-alex"}>
 						<div id="flex-container">
 							<div id="sidebar">
 								<Sidebar />
