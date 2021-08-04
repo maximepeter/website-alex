@@ -16,7 +16,7 @@ class Sidebar extends Component {
 				<div id="list">
 					<a href="/" className="pluslink">
 						<div className="list-item">
-							<div classname="item-title">HOME</div>
+							<div className="item-title">HOME</div>
 							<div className="arrow">
 								<img 
 								src={require('../../images/arrow.png').default}
@@ -26,7 +26,7 @@ class Sidebar extends Component {
 					</a>
 					<a href="contact" className="pluslink">
 						<div className="list-item">
-							<div classname="item-title">CONTACT</div>
+							<div className="item-title">CONTACT</div>
 							<div className="arrow">
 									<img 
 									src={require('../../images/arrow.png').default}

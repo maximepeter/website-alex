@@ -1,16 +1,27 @@
-#container {
+.container {
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
 	height: 80%;
 }
-
-#carousel {
+.images-preview {
+	width: 15%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.preview {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.carousel {
 	margin-top: 3%;
-	width: 65%;
+	width: 60%;
 }
 
-#description {
+.description {
 	text-align: center;
 	padding: 5%;
+}
+img {
+	width: 100%;
 }

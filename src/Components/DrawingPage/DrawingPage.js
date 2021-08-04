@@ -1,10 +1,19 @@
 import React, {Component} from "react";
 import Carousel from "react-bootstrap/Carousel";
+import $ from 'jquery';
 import "./DrawingPage.css";
 
 class DrawingPage extends Component {
+	constructor(props) {
+		super(props);
+		this.goToSlide = this.goToSlide.bind(this);
+	  }
+	goToSlide = () => {
+		console.log($("#main-carousel"));
+	}
 	getParams() {
 		var urlParams;
+		
 		(window.onpopstate = function () {
     		var match,
     		    pl     = /\+/g,  // Regex for replacing addition symbol with a space
@@ -18,16 +27,17 @@ class DrawingPage extends Component {
 		})();
 		return urlParams
 	}
+	
 	render() {
 		var urlParams = this.getParams();
 		const imgId = urlParams["imgId"];
 		var jsonMetaData = require('../../images/'+imgId+'/metaData'+imgId+'.json');
-		console.log(jsonMetaData);
 		return (
-			<div id="container">
-				<div id="carousel">
+			<div className="container">
+				<div className="carousel">
 					<h1 style={{textAlign: "center"}}>{jsonMetaData["drawName"]}</h1>
 					<Carousel
+						id='main-carousel'
 						style={{
 							height: "400px",
 							width: "400px",
@@ -44,7 +54,6 @@ class DrawingPage extends Component {
 								alt="1"
 							/>
 						</Carousel.Item>
-
 						<Carousel.Item>
 							<img								
 								className="d-block w-100"
@@ -54,7 +63,23 @@ class DrawingPage extends Component {
 						</Carousel.Item>
 					</Carousel>
 				</div>
-				<div id="description">
+				<div className="images-preview">
+					<div className="preview">
+						<img								
+								src={require('../../images/'+imgId+'/img'+imgId+'.jpeg').default}
+								alt="preview 1"
+								onClick={() => this.goToSlide()}
+						/>
+					</div>
+						
+					<div className="preview">
+						<img				
+							src={require('../../images/'+imgId+'/img'+imgId+'hand.jpeg').default}
+							alt="preview 2"
+						/>
+					</div>
+				</div>
+				<div className="description">
 					<h4>Technique :</h4>
 					<p>{jsonMetaData["techniques"]}</p>
 					<h4>Taille :</h4>
