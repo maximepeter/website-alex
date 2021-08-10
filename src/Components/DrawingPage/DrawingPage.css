@@ -1,27 +1,57 @@
 .container {
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	height: 80%;
+  display: flex;
+  height: auto;
 }
 .images-preview {
-	width: 15%;
-	margin-left: 5%;
-	margin-right: 5%;
+  width: 15%;
+  margin-right: 5%;
+  margin-top: 3%;
 }
 .preview {
-	margin-top: 10%;
-	margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 .carousel {
-	margin-top: 3%;
-	width: 60%;
+  margin-top: 3%;
+  width: 45%;
 }
 
 .description {
-	text-align: center;
-	padding: 5%;
+  margin-left: 5%;
+  text-align: center;
+  padding: 2%;
 }
 img {
-	width: 100%;
+  width: 100%;
+}
+.draw-title {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 15%;
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 250%;
+  margin-top: 5%;
+  margin-bottom: 15%;
+}
+.draw-type {
+  font-size: 200%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.size-techniques {
+  display: flex;
+  font-size: 150%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.size-gram-content {
+  margin: auto;
+}
+.techniques {
+  font-size: 150%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
