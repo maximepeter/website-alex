@@ -6,18 +6,25 @@ class CarouselPerso extends Component {
     super(props);
     this.state = {
       imgId: this.props.imgId,
+      carouselState: "",
     };
+  }
+  componentDidMount() {
+    this.state.carouselState =
+      document.getElementsByClassName("item active")[0].children[0].alt;
+    console.log(this.state.carouselState);
+  }
+  eventHandler(event) {
+    if (event.type == "fullscreenchange") {
+    } else {
+    }
   }
   render() {
     var imgId = this.props.imgId;
     return (
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
+      <div id="myCarousel" className="carousel slide" data-ride="carousel">
+        <div className="carousel-inner" role="listbox">
+          <div className="item active">
             <img
               src={
                 require("../../../images/" + imgId + "/img" + imgId + ".jpeg")
@@ -27,7 +34,7 @@ class CarouselPerso extends Component {
             />
           </div>
 
-          <div class="item">
+          <div className="item">
             <img
               src={
                 require("../../../images/" +
@@ -42,28 +49,20 @@ class CarouselPerso extends Component {
         </div>
 
         <a
-          class="left carousel-control"
+          className="left carousel-control"
           href="#myCarousel"
           role="button"
           data-slide="prev"
         >
-          <span
-            class="glyphicon glyphicon-chevron-left"
-            aria-hidden="true"
-          ></span>
-          <span class="sr-only">Previous</span>
+          <span className="sr-only">Previous</span>
         </a>
         <a
-          class="right carousel-control"
+          className="right carousel-control"
           href="#myCarousel"
           role="button"
           data-slide="next"
         >
-          <span
-            class="glyphicon glyphicon-chevron-right"
-            aria-hidden="true"
-          ></span>
-          <span class="sr-only">Next</span>
+          <span className="sr-only">Next</span>
         </a>
       </div>
     );

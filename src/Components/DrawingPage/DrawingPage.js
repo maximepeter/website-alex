@@ -65,7 +65,6 @@ class DrawingPage extends Component {
           </div>
         </div>
         <CarouselPerso id="mycarousel" imgId={imgId} />
-
         <div className="description">
           <div className="draw-title">{jsonMetaData["drawName"]}</div>
           <div className="price">{jsonMetaData["price"] + " €"}</div>

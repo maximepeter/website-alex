@@ -1,64 +1,66 @@
-#nav-container {	
-	position: relative;
-	height: 97%;
-	width: 90%;
-	margin-left: 10%;
-	margin-top: 10%;
+#nav-container {
+  position: relative;
+  height: 100%;
 }
-#logo-alex{
-	width: 100%;
-	height: 20%;
-	margin-bottom: 10%;
+#logo-alex {
+  padding-top: 10%;
+  height: 22.5%;
 }
 
 a {
-	-webkit-transition: color 2s;
-	transition: color 0.5s;
-	text-decoration: none;
-	color: black;
-	font-family: "Trebuchet MS", sans-serif;
-	font-size: 150%;
+  -webkit-transition: color 2s;
+  transition: color 0.5s;
+  text-decoration: none;
+  color: black;
+  font-size: 150%;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .pluslink,
 .pluslink:visited,
 .pluslink:active {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .pluslink:hover {
-	text-decoration: none;
-	color: grey;
+  text-decoration: none;
+  color: grey;
 }
 #social {
-	position: absolute;
-	height: 7%;
-	flex-wrap: wrap;
-	text-align: center;
-	bottom: 0%;
-	display: flex;
-	padding: 0.5%;
-	width: 60%;
-	margin-left: 10%;
-	margin-right: 20%;
+  display: flex;
+  position: absolute;
+  height: 7%;
+  flex-wrap: wrap;
+  text-align: center;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5%;
+  width: 100%;
 }
 
 .logo {
-	height: 80%;
-	display: flex;
-	margin: auto;
-	width: auto;
+  height: 100%;
+  display: flex;
+  width: auto;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .list-item {
-	position: relative;
-	margin-top: 1.5%;
-	margin-bottom: 1.5;
-	display: flex;
+  position: relative;
+  margin-top: 1.5%;
+  margin-bottom: 1.5;
+  padding-left: 10%;
+  display: flex;
 }
 .arrow {
-	position: absolute;
-	left: 85%;
-	height: 30%;
-	display: flex;
-	margin-top: 7%;
+  position: absolute;
+  left: 85%;
+  height: 30%;
+  display: flex;
+  margin-top: 7%;
 }

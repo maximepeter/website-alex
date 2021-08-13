@@ -1,22 +1,39 @@
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Gravity", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 #root {
-	height: 100%;
+  height: 100%;
+  font-family: Gravity;
+  color: rgb(113, 109, 131);
+}
+
+@font-face {
+  font-family: "Gravity";
+  src: local("Gravity"), url(./fonts/Gravity-Regular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Apple";
+  src: local("Apple"), url(./fonts/AppleGaramond.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Apollo";
+  src: local("Apollo"), url(./fonts/APOLLO.otf) format("truetype");
 }
