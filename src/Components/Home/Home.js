@@ -20,68 +20,14 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="flex-div">
-          <HomeCard
-            id={imgList[0]}
-            img={
-              require("../../images/" +
-                imgList[0] +
-                "/img" +
-                imgList[0] +
-                ".jpeg").default
-            }
-          />
-          <HomeCard
-            id={imgList[1]}
-            img={
-              require("../../images/" +
-                imgList[1] +
-                "/img" +
-                imgList[1] +
-                ".jpeg").default
-            }
-          />
-          <HomeCard
-            id={imgList[2]}
-            img={
-              require("../../images/" +
-                imgList[2] +
-                "/img" +
-                imgList[2] +
-                ".jpeg").default
-            }
-          />
+          <HomeCard id={imgList[0]} />
+          <HomeCard id={imgList[1]} />
+          <HomeCard id={imgList[2]} />
         </div>
         <div className="flex-div">
-          <HomeCard
-            id={imgList[3]}
-            img={
-              require("../../images/" +
-                imgList[3] +
-                "/img" +
-                imgList[3] +
-                ".jpeg").default
-            }
-          />
-          <HomeCard
-            id={imgList[4]}
-            img={
-              require("../../images/" +
-                imgList[4] +
-                "/img" +
-                imgList[4] +
-                ".jpeg").default
-            }
-          />
-          <HomeCard
-            id={imgList[5]}
-            img={
-              require("../../images/" +
-                imgList[5] +
-                "/img" +
-                imgList[5] +
-                ".jpeg").default
-            }
-          />
+          <HomeCard id={imgList[3]} />
+          <HomeCard id={imgList[4]} />
+          <HomeCard id={imgList[5]} />
         </div>
       </div>
     );

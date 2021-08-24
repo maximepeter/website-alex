@@ -6,7 +6,7 @@ class Sidebar extends Component {
     return (
       <div id="nav-container">
         <div id="logo-alex">
-          <img src={require("../../images/logo.png").default} />
+          <img src={require("../..//images/logo.png").default} />
         </div>
         <div id="list">
           <a href="/" className="pluslink">

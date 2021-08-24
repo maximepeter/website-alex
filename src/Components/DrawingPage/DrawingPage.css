@@ -67,3 +67,54 @@ img {
   padding-bottom: 5%;
   font-style: italic;
 }
+.arrows {
+  height: 9%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.arrow-next {
+  width: 10rem;
+  height: 10rem;
+  background-size: cover;
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+}
+
+.arrow-prev {
+  width: 10rem;
+  height: 10rem;
+  clip-path: polygon(
+    100% 20%,
+    40% 20%,
+    40% 0%,
+    0% 50%,
+    40% 100%,
+    40% 80%,
+    100% 80%
+  );
+}
+@keyframes clips {
+  50% {
+    clip-path: polygon(
+      40% 0%,
+      40% 20%,
+      100% 20%,
+      100% 80%,
+      40% 80%,
+      40% 100%,
+      0% 50%
+    );
+  }
+}
