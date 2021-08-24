@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import { nativeTouchData } from "react-dom/cjs/react-dom-test-utils.production.min";
 import HomeCard from "../Home/HomeCard/HomeCard";
 import "./Home.css";
 
 class Home extends Component {
-  generateRandomImages() {
+  generateRandomImages(n) {
     var imgList = [];
     var max = 11;
     var min = 1;
-    while (imgList.length < 6) {
+    while (imgList.length < n) {
       var randomIdx = Math.floor(Math.random() * (max - min) + min);
       if (!imgList.includes(randomIdx)) {
         imgList.push(randomIdx);
@@ -16,19 +17,18 @@ class Home extends Component {
     return imgList;
   }
   render() {
-    var imgList = this.generateRandomImages();
+    const numberOfDraws = 11;
+    var imgList = this.generateRandomImages(6);
+    console.log(
+      [Array(numberOfDraws)].map((value, index) => (
+        <HomeCard id={index + 1} key={index} />
+      ))
+    );
     return (
       <div className="home">
-        <div className="flex-div">
-          <HomeCard id={imgList[0]} />
-          <HomeCard id={imgList[1]} />
-          <HomeCard id={imgList[2]} />
-        </div>
-        <div className="flex-div">
-          <HomeCard id={imgList[3]} />
-          <HomeCard id={imgList[4]} />
-          <HomeCard id={imgList[5]} />
-        </div>
+        {[...Array(numberOfDraws)].map((value, index) => (
+          <HomeCard id={index + 1} key={index} />
+        ))}
       </div>
     );
   }
