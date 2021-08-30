@@ -5,7 +5,7 @@ import "./Home.css";
 class Home extends Component {
   generateRandomImages(n) {
     var imgList = [];
-    var max = 11;
+    var max = 12;
     var min = 1;
     while (imgList.length < n) {
       var randomIdx = Math.floor(Math.random() * (max - min) + min);
@@ -16,7 +16,7 @@ class Home extends Component {
     return imgList;
   }
   render() {
-    const numberOfDraws = 11;
+    const numberOfDraws = 12;
     return (
       <div className="home">
         {[...Array(numberOfDraws)].map((value, index) => (
