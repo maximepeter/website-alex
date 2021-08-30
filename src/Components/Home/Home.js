@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { nativeTouchData } from "react-dom/cjs/react-dom-test-utils.production.min";
 import HomeCard from "../Home/HomeCard/HomeCard";
 import "./Home.css";
 
@@ -18,12 +17,6 @@ class Home extends Component {
   }
   render() {
     const numberOfDraws = 11;
-    var imgList = this.generateRandomImages(6);
-    console.log(
-      [Array(numberOfDraws)].map((value, index) => (
-        <HomeCard id={index + 1} key={index} />
-      ))
-    );
     return (
       <div className="home">
         {[...Array(numberOfDraws)].map((value, index) => (
