@@ -61,16 +61,3 @@ a {
 .social-logo-image {
   height: 2.5vw;
 }
-@media (max-width: 800px) {
-  .social {
-    flex-direction: column;
-    position: absolute;
-    height: 7%;
-    flex-wrap: wrap;
-    text-align: center;
-    bottom: 0%;
-    justify-content: center;
-    padding: 0.5%;
-    width: 100%;
-  }
-}
