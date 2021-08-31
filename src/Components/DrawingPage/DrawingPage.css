@@ -1,11 +1,14 @@
 .container {
   display: flex;
   height: 80%;
-  margin-left: 0ch;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  justify-content: center;
 }
 .images-preview {
-  width: 10%;
+  width: 7%;
   margin-right: 1%;
+  margin-left: 1%;
   margin-top: 3%;
 }
 .preview {
@@ -13,7 +16,7 @@
 }
 .carousel {
   margin-top: 3%;
-  width: 45%;
+  width: 28%;
   height: fit-content;
 }
 
@@ -32,27 +35,27 @@ img {
   text-align: center;
   padding-top: 5%;
   padding-bottom: 8%;
-  font-size: 300%;
+  font-size: 2.7vw;
   color: rgb(39, 37, 44);
   font-weight: bold;
 }
 
 .price {
-  font-size: 250%;
+  font-size: 2vw;
   padding-top: 2%;
   padding-bottom: 20%;
   color: rgb(39, 37, 44);
   font-weight: bold;
 }
 .draw-type {
-  font-size: 200%;
+  font-size: 1.8vw;
   padding-top: 10%;
   padding-bottom: 5%;
 }
 .size-techniques {
   display: flex;
   align-items: center;
-  font-size: 150%;
+  font-size: 1.5vw;
   padding-top: 5%;
   padding-bottom: 5%;
   font-style: italic;
@@ -62,24 +65,24 @@ img {
   font-style: italic;
 }
 .techniques {
-  font-size: 150%;
+  font-size: 1.6vw;
   padding-top: 5%;
   padding-bottom: 5%;
   font-style: italic;
 }
 .arrows {
-  height: 9%;
   display: flex;
   justify-content: space-between;
   margin-top: 3%;
   padding-top: 3%;
   padding-bottom: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
+
 .arrow-next {
-  width: 10rem;
-  height: 10rem;
+  width: 7vw;
+  height: 7vw;
   background-size: cover;
   clip-path: polygon(
     0% 20%,
@@ -93,8 +96,8 @@ img {
 }
 
 .arrow-prev {
-  width: 10rem;
-  height: 10rem;
+  width: 7vw;
+  height: 7vw;
   clip-path: polygon(
     100% 20%,
     40% 20%,
@@ -105,6 +108,52 @@ img {
     100% 80%
   );
 }
+
+@media (max-width: 800px) {
+  .carousel {
+    margin-top: 3%;
+    width: 50%;
+    height: fit-content;
+  }
+  .arrows {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    padding-left: 8vw;
+    padding-right: 10vw;
+  }
+  .arrow-next {
+    width: 15vw;
+    height: 15vw;
+    background-size: cover;
+    clip-path: polygon(
+      0% 20%,
+      60% 20%,
+      60% 0%,
+      100% 50%,
+      60% 100%,
+      60% 80%,
+      0% 80%
+    );
+  }
+
+  .arrow-prev {
+    width: 15vw;
+    height: 15vw;
+    clip-path: polygon(
+      100% 20%,
+      40% 20%,
+      40% 0%,
+      0% 50%,
+      40% 100%,
+      40% 80%,
+      100% 80%
+    );
+  }
+}
+
 @keyframes clips {
   50% {
     clip-path: polygon(

@@ -3,24 +3,19 @@ import HomeCard from "../Home/HomeCard/HomeCard";
 import "./Home.css";
 
 class Home extends Component {
-  generateRandomImages(n) {
-    var imgList = [];
-    var max = 12;
-    var min = 1;
-    while (imgList.length < n) {
-      var randomIdx = Math.floor(Math.random() * (max - min) + min);
-      if (!imgList.includes(randomIdx)) {
-        imgList.push(randomIdx);
-      }
-    }
-    return imgList;
+  generateRandomIds(n) {
+    const idxs = Array.from({ length: n }, (_, i) => i + 1).sort(
+      (a, b) => 0.5 - Math.random()
+    );
+    return idxs;
   }
   render() {
-    const numberOfDraws = 12;
+    const numberOfDraws = 11;
+    const listIds = this.generateRandomIds(numberOfDraws);
     return (
       <div className="home">
         {[...Array(numberOfDraws)].map((value, index) => (
-          <HomeCard id={index + 1} key={index} />
+          <HomeCard id={listIds[index]} key={listIds[index]} />
         ))}
       </div>
     );
