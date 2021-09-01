@@ -1,9 +1,21 @@
 .home {
+  padding: 4%;
+}
+.series-header {
+  padding-bottom: 3%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.serie-name {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+.draws {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  padding: 4%;
 }
 .HomeCard {
   width: 30%;

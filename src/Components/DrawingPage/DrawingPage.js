@@ -73,7 +73,7 @@ class DrawingPage extends Component {
     var urlParams = this.getParams();
     this.state.imgId = urlParams["imgId"];
     var imgId = parseInt(this.state.imgId);
-    var jsonMetaData = require("../../drawingInformation/metaData" +
+    const jsonMetaData = require("../../drawingInformation/metaData" +
       imgId +
       ".json");
     let ids = this.getNextAndPrevImg(imgId);
