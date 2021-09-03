@@ -1,6 +1,12 @@
 .home {
   padding: 4%;
 }
+.series-container {
+  text-align: center;
+}
+.current-serie-name {
+  margin-bottom: 5%;
+}
 .series-header {
   padding-bottom: 3%;
   text-align: center;

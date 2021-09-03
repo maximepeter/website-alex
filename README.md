@@ -2,7 +2,10 @@
 
 # TO DO:
 
-- Faire un header dynamique
-- Griser les images dynamiquement en fonction du caroussel
-- Mettre un scroll infini sur la home page
-
+- Griser les images dynamiquement en fonction du caroussel [bloque par l'event du carousel]
+- Rajouter une landing page type LOISH
+- Logo : revenir sur la home page
+- Sidebar : Abaisser la taille des logo
+- Disposition : Revoir la dispo
+- Retirer la zone grise sur le carousel
+- Ajouter un bouton retour pour revenir sur la "home page"
