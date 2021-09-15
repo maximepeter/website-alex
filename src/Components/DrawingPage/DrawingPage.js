@@ -135,7 +135,9 @@ class DrawingPage extends Component {
               <div className="size-gram-content">
                 {jsonMetaData["width"] + " x " + jsonMetaData["height"] + " cm"}
               </div>
-              <div className="size-gram-content">300g</div>
+              <div className="size-gram-content">
+                {jsonMetaData["grammage"]}
+              </div>
             </div>
             <div className="techniques">{jsonMetaData["techniques"]}</div>
           </div>
