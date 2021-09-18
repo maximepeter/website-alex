@@ -4,7 +4,6 @@ import "./HomeCard.css";
 class HomeCard extends Component {
   render() {
     var imgId = this.props.id;
-    var drawName = "test";
     var relativeDrawPath = "/images/" + imgId + "/img" + imgId + ".jpeg";
     var drawName = require("../../../drawingInformation/metaData" +
       imgId +

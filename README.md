@@ -4,8 +4,6 @@
 
 - Griser les images dynamiquement en fonction du caroussel [bloque par l'event du carousel]
 - Rajouter une landing page type LOISH
-- Logo : revenir sur la home page
 - Sidebar : Abaisser la taille des logo
 - Disposition : Revoir la dispo
-- Retirer la zone grise sur le carousel
-- Ajouter un bouton retour pour revenir sur la "home page"
+- Ajouter un bouton retour pour revenir sur la "home page" quand on est sur une drawing page

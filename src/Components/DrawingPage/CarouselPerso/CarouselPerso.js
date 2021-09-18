@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./CarouselPerso.css";
-import ReactDOM from "react-dom";
-import $, { event } from "jquery";
 
 class CarouselPerso extends Component {
   constructor(props) {
@@ -14,14 +12,7 @@ class CarouselPerso extends Component {
     };
   }
 
-  componentDidMount() {
-    document
-      .getElementById("myCarousel")
-      .addEventListener("slide", this.handleSlideChange);
-    window.addEventListener("keydown", this.handleSlideChange);
-    this.state.carouselState =
-      document.getElementsByClassName("item active")[0].children[0].alt;
-  }
+  componentDidMount() {}
 
   componentWillUnmount() {
     this.myref.removeEventListener("slide.bs.carousel", this.handleSlideChange);
@@ -71,7 +62,7 @@ class CarouselPerso extends Component {
         </div>
 
         <a
-          className="left carousel-control"
+          className="carousel-control-prev"
           href="#myCarousel"
           role="button"
           data-slide="prev"
@@ -79,7 +70,7 @@ class CarouselPerso extends Component {
           <span className="sr-only">Previous</span>
         </a>
         <a
-          className="right carousel-control"
+          className="carousel-control-next"
           href="#myCarousel"
           role="button"
           data-slide="next"

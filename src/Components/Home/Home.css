@@ -1,25 +1,35 @@
 .home {
-  padding: 4%;
+  padding: 2%;
 }
 .series-container {
   text-align: center;
 }
 .current-serie-name {
-  margin-bottom: 5%;
+  font-size: 300%;
+  font-weight: bold;
+  cursor: default;
+  text-transform: capitalize;
 }
 .series-header {
-  padding-bottom: 3%;
-  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
   display: flex;
   justify-content: center;
+  text-transform: capitalize;
 }
-.serie-name {
-  margin-right: 1%;
-  margin-left: 1%;
+.series-array-elmt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200%;
+  cursor: pointer;
+}
+.serie-name:hover {
+  color: rgba(113, 109, 131, 0.548);
 }
 .draws {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 2fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }

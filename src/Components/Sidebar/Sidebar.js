@@ -6,22 +6,52 @@ class Sidebar extends Component {
     return (
       <div id="nav-container">
         <div id="logo-alex">
-          <img src={require("../..//images/logo.png").default} />
+          <a href="/">
+            <img
+              src={require("../..//images/logo.png").default}
+              style={{ cursor: "pointer" }}
+              alt="Website logo"
+            />
+          </a>
         </div>
         <div id="list">
-          <a href="/" className="pluslink">
+          <a href="/series" className="pluslink">
             <div className="list-item">
-              <div className="item-title">HOME</div>
+              <div className="item-title">Series</div>
               <div className="arrow">
-                <img src={require("../../images/arrow.png").default} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-chevron-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
               </div>
             </div>
           </a>
           <a href="contact" className="pluslink">
             <div className="list-item">
-              <div className="item-title">CONTACT</div>
+              <div className="item-title">Contact</div>
               <div className="arrow">
-                <img src={require("../../images/arrow.png").default} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-chevron-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
               </div>
             </div>
           </a>

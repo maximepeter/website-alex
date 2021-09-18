@@ -50,14 +50,13 @@ a {
   padding-left: 10%;
   display: flex;
   font-size: 90%;
+  align-items: center;
 }
 .arrow {
   position: absolute;
   left: 85%;
-  height: 30%;
   display: flex;
-  margin-top: 7%;
 }
 .social-logo-image {
-  height: 2.5vw;
+  height: 1.5vw;
 }

@@ -1,10 +1,10 @@
 [
     {
-        "serieName": "Lizards",
+        "serieName": "lizards",
         "numberOfDraws": 11
     },
     {
-        "serieName": "Monkeys",
+        "serieName": "monkeys",
         "numberOfDraws": 5
     }
 ]

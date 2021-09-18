@@ -6,7 +6,6 @@ import "./DrawingPage.css";
 class DrawingPage extends Component {
   constructor(props) {
     super(props);
-    this.handleSlideChange = this.handleSlideChange.bind(this);
     this.state = {
       imgId: undefined,
     };
@@ -16,23 +15,13 @@ class DrawingPage extends Component {
       "slide.bs.carousel",
       this.handleSlideChange
     );
-    this.state.carouselState =
-      document.getElementsByClassName("item active")[0].children[0].alt;
-    console.log(this.state.carouselState);
-    this.changeGreyImg();
   };
   changeGreyImg() {
-    if (this.state.carouselState == "First slide") {
+    if (this.state.carouselState === "First slide") {
       document.getElementById("preview-1").style.filter = "grayscale(80%)";
     } else {
       document.getElementById("preview-2").style.filter = "grayscale(80%)";
     }
-  }
-  handleSlideChange(event) {
-    console.log("test");
-    this.state.carouselState =
-      document.getElementsByClassName("item active")[0].children[0].alt;
-    this.changeGreyImg();
   }
   getParams() {
     var urlParams;
@@ -56,10 +45,10 @@ class DrawingPage extends Component {
   getNextAndPrevImg(imgId) {
     var maxImgId = 11;
     var prevId, nextId;
-    if (imgId == 1) {
+    if (imgId === 1) {
       prevId = maxImgId;
       nextId = imgId + 1;
-    } else if (imgId == maxImgId) {
+    } else if (imgId === maxImgId) {
       prevId = imgId - 1;
       nextId = 1;
     } else {
@@ -71,8 +60,7 @@ class DrawingPage extends Component {
 
   render() {
     var urlParams = this.getParams();
-    this.state.imgId = urlParams["imgId"];
-    var imgId = parseInt(this.state.imgId);
+    var imgId = parseInt(urlParams["imgId"]);
     const jsonMetaData = require("../../drawingInformation/metaData" +
       imgId +
       ".json");
@@ -85,7 +73,8 @@ class DrawingPage extends Component {
     let nextImgPath =
       process.env.PUBLIC_URL + "/images/" + nextId + "/img" + nextId + ".jpeg";
     return (
-      <div>
+      <div className="drawing-page">
+        <div className="serie-title">{jsonMetaData["serie"]}</div>
         <div className="container">
           <div className="images-preview">
             <div className="preview">
@@ -148,7 +137,7 @@ class DrawingPage extends Component {
             href={"draw?imgId=" + prevId}
             style={{
               background: "url(" + prevImgPath + ") center no-repeat",
-              backgroundSize: "100px",
+              backgroundSize: "120px",
             }}
           />
           <a
@@ -156,7 +145,7 @@ class DrawingPage extends Component {
             href={"draw?imgId=" + nextId}
             style={{
               background: "url(" + nextImgPath + ") center no-repeat",
-              backgroundSize: "100px",
+              backgroundSize: "120px",
             }}
           />
         </div>

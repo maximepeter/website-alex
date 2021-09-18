@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import DrawingPage from "./Components/DrawingPage/DrawingPage";
 import Contact from "./Components/Contact/Contact";
-import NoMatch from "./Components/NoMatch/NoMatch";
 import Home from "./Components/Home/Home";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
+import LandingPage from "./Components/LandingPage/LandingPage";
 
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -22,7 +20,8 @@ class App extends Component {
               </div>
               <div id="main">
                 <div id="content">
-                  <Route exact path={"/"} component={Home} />
+                  <Route exact path={"/"} component={LandingPage} />
+                  <Route exact path={"/series"} component={Home} />
                   <Route exact path={"/draw"} component={DrawingPage} />
                   <Route exact path="/contact" component={Contact} />
                 </div>
