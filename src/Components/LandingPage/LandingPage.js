@@ -24,8 +24,8 @@ class LandingPage extends Component {
               <a href="/series?serie=lizards">
                 <img
                   class="image-carousel"
-                  src="https://images-na.ssl-images-amazon.com/images/I/91r-zg3t1QL.jpg"
-                  alt="First slide"
+                  src={process.env.PUBLIC_URL + "/images/lizardsPatchwork.png"}
+                  alt="Lizard patchwork"
                 />
               </a>
             </div>
