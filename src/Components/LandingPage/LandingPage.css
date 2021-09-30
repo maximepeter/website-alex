@@ -13,3 +13,21 @@ img {
   max-height: 100vh;
   aspect-ratio: auto 100vh/100vw;
 }
+.caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 43%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  color: grey;
+  font-size: 4vw;
+  padding-bottom: 2vw;
+}
+.caption:hover {
+  color: rgb(190, 190, 190);
+  transition: 1s;
+}

@@ -75,7 +75,7 @@ class DrawingPage extends Component {
     return (
       <div className="drawing-page">
         <div className="serie-title">{jsonMetaData["serie"]}</div>
-        <div className="container">
+        <div className="content">
           <div className="images-preview">
             <div className="preview">
               <img
@@ -112,7 +112,7 @@ class DrawingPage extends Component {
             </div>
           </div>
           <CarouselPerso
-            id="mycarousel"
+            id="myCarousel"
             imgId={imgId}
             ref={(node) => (this.myCarousel = node)}
           />
