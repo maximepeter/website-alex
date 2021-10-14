@@ -3,7 +3,6 @@
 # TO DO:
 
 - Griser les images dynamiquement en fonction du caroussel [bloque par l'event du carousel]
-- Rajouter une landing page type LOISH
 - Sidebar : Abaisser la taille des logo
 - Disposition : Revoir la dispo
 - Ajouter un bouton retour pour revenir sur la "home page" quand on est sur une drawing page

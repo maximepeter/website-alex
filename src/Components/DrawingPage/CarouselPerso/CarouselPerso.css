@@ -1,1 +1,4 @@
-
+.item > img {
+	max-height: 3500px;
+	max-width: 2480px;
+}
