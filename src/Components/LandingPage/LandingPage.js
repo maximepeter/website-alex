@@ -23,7 +23,7 @@ class LandingPage extends Component {
 							<a href="/series?serie=lizards">
 								<img
 									className="image-carousel"
-									src={process.env.PUBLIC_URL + "/images/lizardsPatchwork.png"}
+									src={process.env.PUBLIC_URL + "/images/lizardsPatchwork.jpg"}
 									alt="Lizard patchwork"
 								/>
 								<div class="caption">Lizards</div>
@@ -33,8 +33,8 @@ class LandingPage extends Component {
 							<a href="/series?serie=monkeys">
 								<img
 									className="image-carousel"
-									src="https://www.kilotela.com/wp-content/uploads/2020/12/fabrics-online-original-cotton-by-the-meter-printed-cool-monkeys-140-width.jpg"
-									alt="Second slide"
+									src={process.env.PUBLIC_URL + "/images/monkeysPatchwork.jpeg"}
+									alt="Monkeys patchwork"
 								/>
 								<div className="caption">
 									<div className="caption-content">Monkeys</div>
