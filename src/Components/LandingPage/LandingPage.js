@@ -4,7 +4,7 @@ import React, { Component } from "react";
 class LandingPage extends Component {
 	render() {
 		return (
-			<div id="container">
+			<div className="wrapper">
 				<div
 					id="carouselIndicators"
 					className="carousel slide"

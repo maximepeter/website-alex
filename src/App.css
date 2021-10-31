@@ -36,6 +36,7 @@
 #sidebar {
   width: 13%;
   background-color: #f0eaea;
+  min-width: 75px;
 }
 
 #router {

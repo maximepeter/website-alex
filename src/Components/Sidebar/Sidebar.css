@@ -5,6 +5,8 @@
 #logo-alex {
   padding-top: 10%;
   padding-bottom: 10%;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 a {
@@ -12,7 +14,16 @@ a {
   transition: color 0.5s;
   text-decoration: none;
   color: black;
-  font-size: 1.7vw;
+  font-size: max(15px, 2.25vw);
+}
+
+.bi {
+  padding-right: 0.5vw;
+}
+
+svg {
+  height: 2vw;
+  width: 2vw;
 }
 .pluslink,
 .pluslink:visited,
@@ -58,5 +69,5 @@ a {
   display: flex;
 }
 .social-logo-image {
-  height: 1.5vw;
+  height: max(20px, 1.5vw);
 }

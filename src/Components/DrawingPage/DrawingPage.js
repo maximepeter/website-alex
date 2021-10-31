@@ -120,7 +120,7 @@ class DrawingPage extends Component {
 								href={"draw?imgId=" + prevId}
 								style={{
 									background: "url(" + prevImgPath + ") center no-repeat",
-									backgroundSize: "120px",
+									backgroundSize: "160px",
 								}}
 							/>
 							<div className="transition-name">PREV</div>
@@ -151,7 +151,7 @@ class DrawingPage extends Component {
 								href={"draw?imgId=" + nextId}
 								style={{
 									background: "url(" + nextImgPath + ") center no-repeat",
-									backgroundSize: "120px",
+									backgroundSize: "160px",
 								}}
 							/>
 						</div>

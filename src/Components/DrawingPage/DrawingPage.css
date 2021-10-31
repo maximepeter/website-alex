@@ -14,6 +14,7 @@
 .return-arrow {
 	color: inherit;
 	height: 2%;
+	font-size: 1.5vw;
 }
 
 .return-arrow:hover {
@@ -22,7 +23,6 @@
 }
 
 .content {
-	padding-top: 2%;
 	display: flex;
 	height: 93%;
 }
@@ -41,12 +41,13 @@
 	transition: 0.5s ease;
 	position: absolute;
 	justify-content: center;
-	bottom: 0px;
+	bottom: 2%;
 	display: flex;
 	padding: 2%;
 	align-items: center;
 	width: inherit;
 	font-weight: bold;
+	font-size: 1.5vw;
 }
 .transition-img:hover {
 	-webkit-transform: scale(1.1);
@@ -59,7 +60,7 @@
 	padding: 10%;
 }
 #myCarousel {
-	width: 42%;
+	width: 35%;
 	height: 100%;
 	padding: 2%;
 }
@@ -90,7 +91,7 @@ img {
 .price {
 	font-size: 2vw;
 	padding-top: 2%;
-	padding-bottom: 20%;
+	padding-bottom: 10%;
 	color: rgb(39, 37, 44);
 	font-weight: bold;
 }
@@ -103,8 +104,6 @@ img {
 	display: flex;
 	align-items: center;
 	font-size: 1.5vw;
-	padding-top: 5%;
-	padding-bottom: 5%;
 	font-style: italic;
 }
 .size-gram-content {
@@ -113,8 +112,6 @@ img {
 }
 .techniques {
 	font-size: 1.6vw;
-	padding-top: 5%;
-	padding-bottom: 5%;
 	font-style: italic;
 }
 .arrows {
