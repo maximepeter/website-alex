@@ -5,7 +5,7 @@ import "./Home.css";
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.numberOfDraws = 22;
+    this.numberOfDraws = 23;
     let urlSerie = this.getParams()["serie"]
       ? this.getParams()["serie"]
       : "All";
