@@ -22,7 +22,7 @@
   text-decoration: none;
 }
 
-.content {
+.content-drawing-page {
   display: flex;
   height: 93%;
 }
@@ -33,7 +33,6 @@
   padding: 2%;
 }
 .preview {
-  margin-bottom: 5%;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -158,17 +157,71 @@ img {
 }
 
 @media (max-width: 800px) {
-  .content {
-    flex-direction: column;
+  .serie-title {
+    font-size: 4vw;
+  }
+  .return-arrow {
+    font-size: 2.5vw;
+  }
+  .content-drawing-page {
+    flex-direction: column-reverse;
     align-items: center;
+    height: fit-content;
   }
   .left-content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    column-gap: 10%;
     width: 100%;
   }
   .preview > img {
     width: 12vw;
+  }
+
+  .transition-img {
+    visibility: hidden;
+  }
+  #myCarousel {
+    width: 70%;
+  }
+  .right-content {
+    width: 100%;
+  }
+  .title-and-price {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5%;
+  }
+  .draw-title {
+    padding: unset;
+    font-size: 3.7vw;
+  }
+  .price {
+    font-size: 3vw;
+    padding: unset;
+  }
+  .infos {
+    padding-top: 1%;
+  }
+  .draw-type {
+    font-size: 2.8vw;
+    padding: unset;
+  }
+  .size-techniques {
+    font-size: 2.5vw;
+    column-gap: 2.5%;
+    justify-content: center;
+    padding: unset;
+  }
+  .size-gram-content {
+    margin: unset;
+  }
+  .techniques {
+    padding: unset;
+    font-size: 2.6vw;
   }
   .container {
     margin-top: 10%;

@@ -71,3 +71,41 @@ svg {
 .social-logo-image {
   height: max(20px, 1.5vw);
 }
+@media (max-width: 800px) {
+  #nav-container {
+    display: flex;
+    width: 100%;
+  }
+  #logo-alex {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+  }
+  #list {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .pluslink {
+    align-items: center;
+  }
+  .list-item {
+    font-size: 70%;
+  }
+  .social {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    position: unset;
+    column-gap: 5%;
+    justify-content: right;
+    padding: 2vw;
+    align-items: center;
+  }
+  .logo {
+    margin: unset;
+    height: fit-content;
+  }
+}
