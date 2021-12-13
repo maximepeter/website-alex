@@ -68,9 +68,6 @@ svg {
   left: 85%;
   display: flex;
 }
-.social-logo-image {
-  height: 1.5vw;
-}
 @media (max-width: 800px) {
   #nav-container {
     display: flex;
@@ -96,13 +93,13 @@ svg {
   }
   .social {
     position: absolute;
-    right: 0px;
+    right: 5%;
     height: 100%;
-    position: unset;
-    column-gap: 5%;
-    justify-content: right;
-    padding: 2vw;
+    flex-direction: row;
+    width: 20%;
     align-items: center;
+    justify-content: right;
+    column-gap: 20%;
   }
   .logo {
     margin: unset;
