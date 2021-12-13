@@ -56,6 +56,15 @@ class Sidebar extends Component {
             </div>
           </a>
         </div>
+        <div id="logo-alex">
+          <a href="https://www.instagram.com/alexp.art/">
+            <img
+              src={require("../../images/instagramIcon.png").default}
+              style={{ cursor: "pointer" }}
+              alt="Website logo"
+            />
+          </a>
+        </div>
         <div className="social">
           <div className="logo">
             <a href="https://www.instagram.com/alexp.art/">
