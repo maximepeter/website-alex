@@ -1,6 +1,7 @@
 #nav-container {
   position: relative;
   height: 100%;
+  width: 20%;
 }
 #logo-alex {
   padding-top: 10%;
