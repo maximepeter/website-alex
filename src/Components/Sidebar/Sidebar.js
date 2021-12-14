@@ -60,7 +60,6 @@ class Sidebar extends Component {
           <div className="logo">
             <a href="https://www.instagram.com/alexp.art/">
               <img
-                className="social-logo-image"
                 src={require("../../images/instagramIcon.png").default}
                 alt="instagram"
               />
@@ -69,7 +68,6 @@ class Sidebar extends Component {
           <div className="logo">
             <a href="https://www.linkedin.com/in/alexandre-peter-73b625143/">
               <img
-                className="social-logo-image"
                 src={require("../../images/linkedInIcon.png").default}
                 alt="linkedin"
               />

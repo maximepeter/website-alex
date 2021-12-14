@@ -93,19 +93,16 @@ svg {
   }
   .social {
     position: absolute;
-    right: 5%;
+    right: 0%;
+    top: 0%;
     height: 100%;
     flex-direction: row;
     width: 20%;
     align-items: center;
-    justify-content: right;
     column-gap: 20%;
   }
   .logo {
     margin: unset;
-    height: fit-content;
-  }
-  .social-logo-image {
-    height: 20px;
+    height: 50%;
   }
 }
