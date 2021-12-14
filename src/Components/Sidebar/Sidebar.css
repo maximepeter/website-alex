@@ -1,7 +1,6 @@
 #nav-container {
   position: relative;
   height: 100%;
-  width: 20%;
 }
 #logo-alex {
   padding-top: 10%;
@@ -9,7 +8,7 @@
   padding-right: 5%;
   padding-left: 5%;
   aspect-ratio: 1/1;
-  height: 100%;
+  width: 100%;
 }
 
 a {
@@ -53,7 +52,7 @@ svg {
 }
 
 .logo {
-  height: 100%;
+  height: 50%;
   margin-left: 10%;
   margin-right: 10%;
   padding: 0.5%;
@@ -83,6 +82,8 @@ svg {
     padding-bottom: 1%;
     padding-right: 1%;
     padding-left: 1%;
+    height: 100%;
+    width: unset;
   }
   #list {
     width: 20%;
