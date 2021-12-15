@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://css.gg/menu-grid-r.css");
+.buttons-list .icon {
+  position: relative;
+  background-color: #f5f1f1;
+  color: #686868;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 10px;
+  width: 66px;
+  height: 66px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.buttons-list .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 3 vw;
+  background-color: #f5f1f1;
+  color: #f5f1f1;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.buttons-list .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #f5f1f1;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.buttons-list .icon:hover .tooltip {
+  top: -40px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.buttons-list .icon:hover span,
+.buttons-list .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-list .series:hover,
+.buttons-list .series:hover .tooltip,
+.buttons-list .series:hover .tooltip::before {
+  background-color: #de3b3b;
+  color: #f5f1f1;
+}
+
+.buttons-list .instagram:hover,
+.buttons-list .instagram:hover .tooltip,
+.buttons-list .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #f5f1f1;
+}
+
+.buttons-list .linkedin:hover,
+.buttons-list .linkedin:hover .tooltip,
+.buttons-list .linkedin:hover .tooltip::before {
+  background-color: #3e3bde;
+  color: #f5f1f1;
+}
+
+@media (max-width: 800px) {
+  .buttons-list .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .buttons-list .icon:hover .tooltip {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

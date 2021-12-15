@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CarouselPerso from "./CarouselPerso/CarouselPerso";
+import BackButton from "./BackButton/BackButton";
 import ReactDOM from "react-dom";
 import "./DrawingPage.css";
 
@@ -76,9 +77,7 @@ class DrawingPage extends Component {
     return (
       <div className="drawing-page">
         <div className="serie-title">{serieName}</div>
-        <a className="return-arrow" href={"series?serie=" + serieName}>
-          Back
-        </a>
+        <BackButton />
         <div className="content-drawing-page">
           <div className="left-content">
             <div className="preview">
