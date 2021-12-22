@@ -8,7 +8,7 @@ class Sidebar extends Component {
         <div id="logo-alex">
           <a href="/">
             <img
-              src={require("../..//images/logo.png").default}
+              src={require("../..//images/newLogo.png").default}
               style={{ cursor: "pointer" }}
               alt="Website logo"
             />

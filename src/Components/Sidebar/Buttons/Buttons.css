@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://css.gg/menu-grid-r.css");
+
+.buttons-list {
+  justify-content: space-between;
+}
+
 .buttons-list .icon {
   position: relative;
   background-color: #f5f1f1;
@@ -78,6 +83,18 @@
   color: #f5f1f1;
 }
 
+.social {
+  padding-bottom: 5%;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+}
+
+.social > .icon {
+  height: 3vw;
+  width: 3vw;
+}
+
 @media (max-width: 800px) {
   .buttons-list .icon {
     width: 50px;
@@ -86,5 +103,14 @@
   .buttons-list .icon:hover .tooltip {
     visibility: hidden;
     opacity: 0;
+  }
+  .social {
+    bottom: unset;
+    right: 0px;
+    padding: unset;
+  }
+  .social > .icon {
+    height: 10vw;
+    width: 10vw;
   }
 }

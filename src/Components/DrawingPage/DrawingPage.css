@@ -11,11 +11,6 @@
   cursor: default;
   text-transform: capitalize;
 }
-.return-arrow {
-  color: inherit;
-  height: 2%;
-  font-size: 1.5vw;
-}
 
 .return-arrow:hover {
   color: rgba(113, 109, 131, 0.5);
@@ -42,6 +37,7 @@
 
 .preview > img {
   width: 8.5vw;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .transition-img {
@@ -101,17 +97,16 @@ img {
 }
 .draw-type {
   font-size: 1.8vw;
-  padding-top: 10%;
-  padding-bottom: 5%;
 }
 .size-techniques {
   display: flex;
   align-items: center;
   font-size: 1.5vw;
   font-style: italic;
+  column-gap: 10%;
+  justify-content: center;
 }
 .size-gram-content {
-  margin: auto;
   font-style: italic;
 }
 .techniques {
