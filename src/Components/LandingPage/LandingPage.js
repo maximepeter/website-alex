@@ -23,7 +23,12 @@ class LandingPage extends Component {
               <a href="/series?serie=lizards">
                 <img
                   className="image-carousel"
-                  src={process.env.PUBLIC_URL + "/images/lizardsPatchwork.jpg"}
+                  srcset={
+                    "https://stgimgalex.blob.core.windows.net/thubnails/lizardsPatchwork.jpg 1000w, " +
+                    "https://stgimgalex.blob.core.windows.net/thubnails/smallLizardsPatchwork.png 400w"
+                  }
+                  sizes="(max-width: 800px) 400px,
+            1000px"
                   alt="Lizard patchwork"
                 />
                 <div class="caption">Lizards</div>
@@ -33,7 +38,9 @@ class LandingPage extends Component {
               <a href="/series?serie=monkeys">
                 <img
                   className="image-carousel"
-                  src={process.env.PUBLIC_URL + "/images/monkeysPatchwork.jpeg"}
+                  src={
+                    "https://stgimgalex.blob.core.windows.net/thubnails/monkeysPatchwork.jpeg"
+                  }
                   alt="Monkeys patchwork"
                 />
                 <div className="caption">

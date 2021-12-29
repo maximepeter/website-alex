@@ -35,10 +35,7 @@ class CarouselPerso extends Component {
           <div className="item active">
             <img
               src={
-                process.env.PUBLIC_URL +
-                "/images/" +
-                imgId +
-                "/img" +
+                "https://stgimgalex.blob.core.windows.net/thubnails/img" +
                 imgId +
                 ".jpeg"
               }
@@ -49,10 +46,7 @@ class CarouselPerso extends Component {
           <div className="item">
             <img
               src={
-                process.env.PUBLIC_URL +
-                "/images/" +
-                imgId +
-                "/img" +
+                "https://stgimgalex.blob.core.windows.net/thubnails/img" +
                 imgId +
                 "hand.jpeg"
               }

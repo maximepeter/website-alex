@@ -70,9 +70,13 @@ class DrawingPage extends Component {
     let nextId = ids.nextId;
     console.log(prevId, nextId);
     let prevImgPath =
-      process.env.PUBLIC_URL + "/images/" + prevId + "/img" + prevId + ".jpeg";
+      "https://stgimgalex.blob.core.windows.net/thubnails/img" +
+      prevId +
+      ".jpeg";
     let nextImgPath =
-      process.env.PUBLIC_URL + "/images/" + nextId + "/img" + nextId + ".jpeg";
+      "https://stgimgalex.blob.core.windows.net/thubnails/img" +
+      nextId +
+      ".jpeg";
     let serieName = jsonMetaData["serie"];
     return (
       <div className="drawing-page">
@@ -84,10 +88,7 @@ class DrawingPage extends Component {
               <img
                 id="preview-1"
                 src={
-                  process.env.PUBLIC_URL +
-                  "/images/" +
-                  imgId +
-                  "/img" +
+                  "https://stgimgalex.blob.core.windows.net/thubnails/img" +
                   imgId +
                   ".jpeg"
                 }
@@ -101,10 +102,7 @@ class DrawingPage extends Component {
               <img
                 id="preview-2"
                 src={
-                  process.env.PUBLIC_URL +
-                  "/images/" +
-                  imgId +
-                  "/img" +
+                  "https://stgimgalex.blob.core.windows.net/thubnails/img" +
                   imgId +
                   "hand.jpeg"
                 }

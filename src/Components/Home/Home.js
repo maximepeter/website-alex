@@ -97,6 +97,20 @@ class Home extends Component {
           {[...Array(this.state.imagesToDisplay.length)].map((value, index) => (
             <HomeCard id={this.state.imagesToDisplay[index]} key={index} />
           ))}
+          <div className="flex-div">
+            <div className="card">
+              <img
+                className="card-img"
+                src="https://stgimgalex.blob.core.windows.net/thubnails/img1.jpeg"
+                alt="item 11"
+              />
+              <a href="draw?imgId=1" className="pluslink">
+                <div className="image__overlay image__overlay--primary">
+                  <div className="image__title">Test Azure</div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     );
