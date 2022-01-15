@@ -1,55 +1,40 @@
 import React, { Component } from "react";
 import "./HomeCard.css";
-import { BlobServiceClient } from "@azure/storage-blob";
+import { downloadFromBlob } from "../../../utils.js";
 
 class HomeCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      test: null,
+      metadata: {
+        drawName: "",
+        grammage: "",
+        height: "",
+        price: "",
+        serie: "",
+        serieName: "",
+        techniques: "",
+        width: "",
+      },
     };
   }
-  render() {
-    var imgId = this.props.id;
-    // var drawName =
-    //   "https://stgimgalex.blob.core.windows.net/img-infos/metaData" +
-    //   imgId +
-    //   ".json";
-    const account = "stgimgalex";
-    const containerName = "img-infos";
-    const blobName = "metaData" + this.props.id + ".json";
-    var test = null;
+  async componentDidMount() {
+    downloadFromBlob("metaData" + this.props.id + ".json").then((res) => {
+      this.setState({ metadata: JSON.parse(res) });
+    });
+  }
 
-    async function blobToString(blob) {
-      const fileReader = new FileReader();
-      return new Promise((resolve, reject) => {
-        fileReader.onloadend = (ev) => {
-          resolve(ev.target.result);
-        };
-        fileReader.onerror = reject;
-        fileReader.readAsText(blob);
+  async componentDidUpdate(prevProps) {
+    if (this.props.id !== prevProps.id) {
+      console.log("Different");
+      downloadFromBlob("metaData" + this.props.id + ".json").then((res) => {
+        this.setState({ metadata: JSON.parse(res) });
       });
     }
-    async function download() {
-      const blobServiceClient = new BlobServiceClient(
-        `https://${account}.blob.core.windows.net`
-      );
-      const containerClient =
-        blobServiceClient.getContainerClient(containerName);
-      const blobClient = containerClient.getBlobClient(blobName);
-      const downloadBlockBlobResponse = await blobClient.download();
-      const downloaded = await blobToString(
-        await downloadBlockBlobResponse.blobBody
-      );
-      // console.log("Downloaded blob content", downloaded);
-      test = downloaded;
-    }
-    console.log(test);
-    download();
-    download().then((res) => {
-      var drawName = res;
-      console.log(drawName);
-    });
+  }
+  render() {
+    console.log(this.state);
+
     return (
       <div className="flex-div">
         <div className="card">
@@ -57,14 +42,16 @@ class HomeCard extends Component {
             className="card-img"
             src={
               "https://stgimgalex.blob.core.windows.net/thubnails/img" +
-              imgId +
+              this.props.id +
               ".jpeg"
             }
-            alt={"item " + imgId}
+            alt={"item " + this.props.id}
           />
-          <a href={"draw?imgId=" + imgId} className="pluslink">
+          <a href={"draw?imgId=" + this.props.id} className="pluslink">
             <div className="image__overlay image__overlay--primary">
-              <div className="image__title">{this.state.test}</div>
+              <div className="image__title">
+                {this.state.metadata["drawName"]}
+              </div>
             </div>
           </a>
         </div>

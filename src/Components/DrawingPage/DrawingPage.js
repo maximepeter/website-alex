@@ -3,20 +3,30 @@ import CarouselPerso from "./CarouselPerso/CarouselPerso";
 import BackButton from "./BackButton/BackButton";
 import ReactDOM from "react-dom";
 import "./DrawingPage.css";
+import { downloadFromBlob } from "../../utils.js";
 
 class DrawingPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       imgId: undefined,
+      jsonMetaData: {},
     };
   }
-  componentDidMount = () => {
+  async componentDidMount() {
+    var urlParams = this.getParams();
+    var imgId = parseInt(urlParams["imgId"]);
+    this.setState({ imgId: imgId });
+    var blobName = "metaData" + imgId + ".json";
+    this.setState({ imgId: imgId });
+    downloadFromBlob(blobName).then((res) => {
+      this.setState({ jsonMetaData: JSON.parse(res) });
+    });
     ReactDOM.findDOMNode(this).addEventListener(
       "slide.bs.carousel",
       this.handleSlideChange
     );
-  };
+  }
   changeGreyImg() {
     if (this.state.carouselState === "First slide") {
       document.getElementById("preview-1").style.filter = "grayscale(80%)";
@@ -60,15 +70,10 @@ class DrawingPage extends Component {
   }
 
   render() {
-    var urlParams = this.getParams();
-    var imgId = parseInt(urlParams["imgId"]);
-    const jsonMetaData = require("../../drawingInformation/metaData" +
-      imgId +
-      ".json");
-    let ids = this.getNextAndPrevImg(imgId);
+    const jsonMetaData = this.state.jsonMetaData;
+    let ids = this.getNextAndPrevImg(1);
     let prevId = ids.prevId;
     let nextId = ids.nextId;
-    console.log(prevId, nextId);
     let prevImgPath =
       "https://stgimgalex.blob.core.windows.net/thubnails/img" +
       prevId +
@@ -89,7 +94,7 @@ class DrawingPage extends Component {
                 id="preview-1"
                 src={
                   "https://stgimgalex.blob.core.windows.net/thubnails/img" +
-                  imgId +
+                  this.state.imgId +
                   ".jpeg"
                 }
                 alt="preview 1"
@@ -103,7 +108,7 @@ class DrawingPage extends Component {
                 id="preview-2"
                 src={
                   "https://stgimgalex.blob.core.windows.net/thubnails/img" +
-                  imgId +
+                  this.state.imgId +
                   "hand.jpeg"
                 }
                 alt="preview 2"
@@ -125,7 +130,7 @@ class DrawingPage extends Component {
           </div>
           <CarouselPerso
             id="myCarousel"
-            imgId={imgId}
+            imgId={this.state.imgId}
             ref={(node) => (this.myCarousel = node)}
           />
           <div className="right-content">

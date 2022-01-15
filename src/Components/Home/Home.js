@@ -1,24 +1,55 @@
 import React, { Component } from "react";
 import HomeCard from "../Home/HomeCard/HomeCard";
+import { downloadFromBlob } from "../../utils.js";
 import "./Home.css";
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.numberOfDraws = 23;
     let urlSerie = this.getParams()["serie"]
       ? this.getParams()["serie"]
       : "All";
-
+    this.numberOfDraws = 23;
     this.state = {
       serie: urlSerie,
-      imagesToDisplay: this.generateRandomIds(urlSerie),
+      series: [
+        {
+          serieName: "lizards",
+          numberOfDraws: 0,
+          drawIds: [],
+        },
+        {
+          serieName: "monkeys",
+          numberOfDraws: 0,
+          drawIds: [],
+        },
+      ],
+      imagesToDisplay: [],
     };
-    console.log(this.state.imagesToDisplay);
   }
+
+  async componentDidMount() {
+    async function calculateNumberOfDraws(arr) {
+      return arr.map((x) => x["numberOfDraws"]).reduce((x, y) => x + y);
+    }
+    const blobName = "series.json";
+
+    downloadFromBlob(blobName).then((res) => {
+      const jsonResult = JSON.parse(res);
+      calculateNumberOfDraws(jsonResult).then((n) => {
+        this.setState({ numberOfDraws: n });
+      });
+      this.setState({
+        series: jsonResult,
+      });
+      this.setState({
+        imagesToDisplay: this.generateIds(this.state.serie, 23),
+      });
+    });
+  }
+
   getParams() {
     var urlParams;
-
     (window.onpopstate = function () {
       var match,
         pl = /\+/g, // Regex for replacing addition symbol with a space
@@ -34,33 +65,43 @@ class Home extends Component {
     })();
     return urlParams;
   }
-  changeSerieState(event, newState) {
-    this.setState({
-      serie: newState,
-      imagesToDisplay: this.generateRandomIds(newState),
-    });
-  }
-  generateRandomIds(serieName) {
-    var listImgs = [];
 
-    for (let i = 1; i <= this.numberOfDraws; i++) {
-      if (serieName === "All") {
+  changeSerieState(event, newState) {
+    var nbDraws = 0;
+    this.setState({ serie: newState });
+    for (let i = 0; i < this.state.series.length; i++) {
+      if (this.state.series[i]["serieName"] === newState) {
+        nbDraws = this.state.series[i]["numberOfDraws"];
+        this.setState({
+          imagesToDisplay: this.generateIds(newState, nbDraws),
+        });
+      } else {
+        this.setState({
+          imagesToDisplay: this.generateIds(newState, this.state.numberOfDraws),
+        });
+      }
+    }
+  }
+
+  generateIds(serieName, numberOfDraws) {
+    if (serieName === "All") {
+      var listImgs = [];
+      for (let i = 1; i <= numberOfDraws; i++) {
         listImgs.push(i);
         listImgs.sort((a, b) => 0.5 - Math.random());
-      } else {
-        if (
-          require("../../drawingInformation/metaData" + i + ".json")[
-            "serie"
-          ] === serieName
-        ) {
-          listImgs.push(i);
+      }
+      return listImgs;
+    } else {
+      for (let i = 0; i < this.state.series.length; i++) {
+        if (serieName === this.state.series[i]["serieName"]) {
+          return this.state.series[i]["drawIds"];
         }
       }
     }
-    return listImgs;
   }
+
   render() {
-    const seriesNames = require("../../drawingInformation/series.json");
+    console.log(this.state.imagesToDisplay);
     return (
       <div className="home">
         <div className="series-container">
@@ -75,19 +116,19 @@ class Home extends Component {
             >
               All
             </div>
-            {[...Array(seriesNames.length)].map((value, index) => (
-              <div className="series-array-elmt">
+            {[...Array(this.state.series.length)].map((value, index) => (
+              <div className="series-array-elmt" key={index}>
                 <div className="vertical-separator"></div>
                 <div
                   className="serie-name"
                   onClick={(event) => {
                     this.changeSerieState(
                       event,
-                      seriesNames[index]["serieName"]
+                      this.state.series[index]["serieName"]
                     );
                   }}
                 >
-                  {seriesNames[index]["serieName"]}
+                  {this.state.series[index]["serieName"]}
                 </div>
               </div>
             ))}
@@ -97,20 +138,6 @@ class Home extends Component {
           {[...Array(this.state.imagesToDisplay.length)].map((value, index) => (
             <HomeCard id={this.state.imagesToDisplay[index]} key={index} />
           ))}
-          <div className="flex-div">
-            <div className="card">
-              <img
-                className="card-img"
-                src="https://stgimgalex.blob.core.windows.net/thubnails/img1.jpeg"
-                alt="item 11"
-              />
-              <a href="draw?imgId=1" className="pluslink">
-                <div className="image__overlay image__overlay--primary">
-                  <div className="image__title">Test Azure</div>
-                </div>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     );
