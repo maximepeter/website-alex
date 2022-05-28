@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://css.gg/menu-grid-r.css");
+
+.icon {
+  position: relative;
+  background-color: #f5f1f1;
+  color: #686868;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 10px;
+  width: 56px;
+  height: 56px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 3 vw;
+  background-color: #f5f1f1;
+  color: #f5f1f1;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #f5f1f1;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip {
+  top: -40px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.svg {
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 10px;
+  width: 56px;
+}
+
+.svg:hover {
+  fill: #3bdedb;
+}
+
+.series:hover,
+.series:hover .tooltip,
+.series:hover .tooltip::before {
+  background-color: #de3b3b;
+  color: #f5f1f1;
+}
+
+.instagram:hover,
+.instagram:hover .tooltip,
+.instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #f5f1f1;
+}
+
+.linkedin:hover,
+.linkedin:hover .tooltip,
+.linkedin:hover .tooltip::before {
+  background-color: #3e3bde;
+  color: #f5f1f1;
+}
+
+.all:hover,
+.all:hover .tooltip,
+.all:hover .tooltip::before {
+  text-transform: capitalize;
+  background-color: #3bdedb;
+  color: #f5f1f1;
+}
+
+.lizards:hover .tooltip,
+.lizards:hover,
+.lizards:hover .tooltip::before {
+  text-transform: capitalize;
+  background-color: #0fd75c;
+  color: #f5f1f1;
+}
+
+.monkeys:hover,
+.monkeys:hover .tooltip,
+.monkeys:hover .tooltip::before {
+  text-transform: capitalize;
+  background-color: #cfaf0e;
+  color: #f5f1f1;
+}
+
+.insects:hover,
+.insects:hover .tooltip,
+.insects:hover .tooltip::before {
+  text-transform: capitalize;
+  background-color: #0e65cf;
+  color: #f5f1f1;
+}
+
+.social {
+  padding-bottom: 5%;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+}
+
+.social > .icon {
+  height: 3vw;
+  width: 3vw;
+}
+
+@media (max-width: 800px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .icon:hover .tooltip {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .social {
+    bottom: unset;
+    right: 0px;
+    padding: unset;
+  }
+  .social > .icon {
+    height: 10vw;
+    width: 10vw;
+  }
+}

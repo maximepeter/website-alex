@@ -35,6 +35,11 @@
   padding: 5%;
 }
 
+.preview:hover {
+  transition: 0.5s all ease-in-out;
+  transform: scale(1.04);
+}
+
 .preview > img {
   width: 8.5vw;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
