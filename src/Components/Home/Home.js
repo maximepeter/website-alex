@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HomeCard from "../Home/HomeCard/HomeCard";
+import Button from "../Global/Button/Button";
 import { downloadFromBlob } from "../../utils.js";
 import "./Home.css";
 
@@ -106,7 +107,6 @@ class Home extends Component {
       <div className="home">
         <div className="series-container">
           <div className="current-serie-name">{this.state.serie}</div>
-          <div className="big-separator"></div>
           <div className="series-header">
             <div
               className="series-array-elmt"
@@ -114,7 +114,7 @@ class Home extends Component {
                 this.changeSerieState(event, "All");
               }}
             >
-              All
+              <Button text="all" />
             </div>
             {[...Array(this.state.series.length)].map((value, index) => (
               <div className="series-array-elmt" key={index}>
@@ -128,7 +128,7 @@ class Home extends Component {
                     );
                   }}
                 >
-                  {this.state.series[index]["serieName"]}
+                  <Button text={this.state.series[index]["serieName"]} />
                 </div>
               </div>
             ))}
