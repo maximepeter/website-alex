@@ -15,37 +15,57 @@ class Button extends Component {
       case "all":
         return (
           <div className="button">
-            <a className={"icon " + this.text}>
+            <div className={"icon " + this.text}>
               <All />
               <div className={"tooltip " + this.text}>{this.text}</div>
-            </a>
+            </div>
           </div>
         );
       case "lizards":
         return (
           <div className="button">
-            <a className={"icon " + this.text}>
+            <div className={"icon " + this.text}>
               <Lizard />
               <div className={"tooltip " + this.text}>{this.text}</div>
-            </a>
+            </div>
           </div>
         );
       case "monkeys":
         return (
           <div className="button">
-            <a className={"icon " + this.text}>
+            <div className={"icon " + this.text}>
               <Monkey />
               <div className={"tooltip " + this.text}>{this.text}</div>
-            </a>
+            </div>
           </div>
         );
       case "insects":
         return (
           <div className="button">
-            <a className={"icon " + this.text}>
+            <div className={"icon " + this.text}>
               <Insect />
               <div className={"tooltip " + this.text}>{this.text}</div>
+            </div>
+          </div>
+        );
+      case "backButton":
+        return (
+          <div className="button">
+            <a className={"icon " + this.text} href="/series">
+              <span>
+                <i className="fa gg-arrow-left-r"></i>
+              </span>
             </a>
+            <div className={"tooltip " + this.text}>Back</div>
+          </div>
+        );
+      default:
+        return (
+          <div className="button">
+            <div className={"icon " + this.text}>
+              <All />
+              <div className={"tooltip " + this.text}>{this.text}</div>
+            </div>
           </div>
         );
     }

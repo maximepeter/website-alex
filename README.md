@@ -15,8 +15,4 @@ npm start
 # TO DO:
 
 - Griser les images dynamiquement en fonction du caroussel [bloque par l'event du carousel]
-- Sidebar : Abaisser la taille des logo
-- Ajouter un bouton retour pour revenir sur la "home page" quand on est sur une drawing page
-
-- Retirer le "?{serieName}" de l'URL, ça doit pouvoir passer avec un props propagé vers le Home.js
-- Finaliser la g'en'eralisation des bouttons
+- Sidebar : Abaisser la taille des logos

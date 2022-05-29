@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import "./Buttons.css";
 
 class Buttons extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="buttons-list">

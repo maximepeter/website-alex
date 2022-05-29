@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://css.gg/menu-grid-r.css");
+@import url("https://css.gg/arrow-left-r.css");
 
 .icon {
   position: relative;
@@ -119,6 +120,14 @@
 .insects:hover .tooltip::before {
   text-transform: capitalize;
   background-color: #0e65cf;
+  color: #f5f1f1;
+}
+
+.backButton:hover,
+.backButton:hover .tooltip,
+.backButton:hover .tooltip::before {
+  text-transform: capitalize;
+  background-color: #c3c3c3;
   color: #f5f1f1;
 }
 

@@ -26,15 +26,12 @@ class HomeCard extends Component {
 
   async componentDidUpdate(prevProps) {
     if (this.props.id !== prevProps.id) {
-      console.log("Different");
       downloadFromBlob("metaData" + this.props.id + ".json").then((res) => {
         this.setState({ metadata: JSON.parse(res) });
       });
     }
   }
   render() {
-    console.log(this.state);
-
     return (
       <div className="flex-div">
         <div className="card">
