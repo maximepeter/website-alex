@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CarouselPerso from "./CarouselPerso/CarouselPerso";
-import BackButton from "./BackButton/BackButton";
-import ReactDOM from "react-dom";
+import Button from "../Global/Button/Button";
 import "./DrawingPage.css";
 import { downloadFromBlob } from "../../utils.js";
 
@@ -22,10 +21,6 @@ class DrawingPage extends Component {
     downloadFromBlob(blobName).then((res) => {
       this.setState({ jsonMetaData: JSON.parse(res) });
     });
-    ReactDOM.findDOMNode(this).addEventListener(
-      "slide.bs.carousel",
-      this.handleSlideChange
-    );
   }
   changeGreyImg() {
     if (this.state.carouselState === "First slide") {
@@ -86,7 +81,7 @@ class DrawingPage extends Component {
     return (
       <div className="drawing-page">
         <div className="serie-title">{serieName}</div>
-        <BackButton />
+        <Button text="backButton" />
         <div className="content-drawing-page">
           <div className="left-content">
             <div className="preview">
@@ -124,7 +119,9 @@ class DrawingPage extends Component {
                   background: "url(" + prevImgPath + ") center no-repeat",
                   backgroundSize: "160px",
                 }}
-              />
+              >
+                '
+              </a>
               <div className="transition-name">PREV</div>
             </div>
           </div>
@@ -163,7 +160,9 @@ class DrawingPage extends Component {
                   background: "url(" + nextImgPath + ") center no-repeat",
                   backgroundSize: "160px",
                 }}
-              />
+              >
+                '
+              </a>
             </div>
           </div>
         </div>

@@ -102,7 +102,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.imagesToDisplay);
     return (
       <div className="home">
         <div className="series-container">
